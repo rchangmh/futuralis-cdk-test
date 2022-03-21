@@ -1,14 +1,5 @@
-# Welcome to your CDK TypeScript project
+# Futuralis CDK Test
 
-This is a blank project for TypeScript development with CDK.
+This stack deploys a Lambda function that returns "hello world", an API Gateway to route to the function, and Cognito resources to provide access.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+To deploy, run `npm install` and `cdk deploy --profile [PROFILE_NAME]`.
