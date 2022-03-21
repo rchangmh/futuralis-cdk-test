@@ -1,0 +1,160 @@
+{
+  "version": "16.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "FuturalisCdkTestStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "FuturalisCdkTestStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "FuturalisCdkTestStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "FuturalisCdkTestStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/ad6becdad9eb31457e4f1c23b098a97398b609a5fa5161aeec4a9efe4b971245.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "FuturalisCdkTestStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "FuturalisCdkTestStack.assets"
+      ],
+      "metadata": {
+        "/FuturalisCdkTestStack/lambdaFn/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaFnServiceRole85684027"
+          }
+        ],
+        "/FuturalisCdkTestStack/lambdaFn/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaFn54E599D5"
+          }
+        ],
+        "/FuturalisCdkTestStack/gateway/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "gatewayB15F83BA"
+          }
+        ],
+        "/FuturalisCdkTestStack/gateway/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "gatewayCloudWatchRole95D07D64"
+          }
+        ],
+        "/FuturalisCdkTestStack/gateway/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "gatewayAccountCD2885BD"
+          }
+        ],
+        "/FuturalisCdkTestStack/gateway/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "gatewayDeploymentB2283F364450ab19851840f20f35cbf81d46a13a"
+          }
+        ],
+        "/FuturalisCdkTestStack/gateway/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "gatewayDeploymentStageprodDC6C730C"
+          }
+        ],
+        "/FuturalisCdkTestStack/gateway/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "gatewayEndpointDA8D204E"
+          }
+        ],
+        "/FuturalisCdkTestStack/gateway/Default/GET/ApiPermission.FuturalisCdkTestStackgatewayA3D021CE.GET..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "gatewayGETApiPermissionFuturalisCdkTestStackgatewayA3D021CEGET41F21A85"
+          }
+        ],
+        "/FuturalisCdkTestStack/gateway/Default/GET/ApiPermission.Test.FuturalisCdkTestStackgatewayA3D021CE.GET..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "gatewayGETApiPermissionTestFuturalisCdkTestStackgatewayA3D021CEGET4F273A1B"
+          }
+        ],
+        "/FuturalisCdkTestStack/gateway/Default/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "gatewayGET91E027CC"
+          }
+        ],
+        "/FuturalisCdkTestStack/userpool/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "userpool0AC4AA96"
+          }
+        ],
+        "/FuturalisCdkTestStack/domain/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "domainFBFFA2F6"
+          }
+        ],
+        "/FuturalisCdkTestStack/cognitoClient/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cognitoClient7DE7F683"
+          }
+        ],
+        "/FuturalisCdkTestStack/authorizer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authorizerD23CB5CD"
+          }
+        ],
+        "/FuturalisCdkTestStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/FuturalisCdkTestStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/FuturalisCdkTestStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/FuturalisCdkTestStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "FuturalisCdkTestStack"
+    }
+  }
+}

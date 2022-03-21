@@ -1,0 +1,19 @@
+{
+  "version": "16.0.0",
+  "files": {
+    "ad6becdad9eb31457e4f1c23b098a97398b609a5fa5161aeec4a9efe4b971245": {
+      "source": {
+        "path": "FuturalisCdkTestStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "ad6becdad9eb31457e4f1c23b098a97398b609a5fa5161aeec4a9efe4b971245.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
